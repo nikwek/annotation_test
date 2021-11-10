@@ -7,4 +7,4 @@
 
 \x1b[31m  (compared using eql?)\x1b[0m
 </code>
-<\pre>
+</pre>
