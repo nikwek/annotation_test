@@ -1,4 +1,4 @@
-\`\`\`term
+```term
 
 \x1b[31mFailure/Error:\x1b[0m \x1b[32mexpect\x1b[0m(new_item.created_at).to eql(now)
 
@@ -7,4 +7,4 @@
 
 \x1b[31m  (compared using eql?)\x1b[0m
 
-\`\`\`
+```
