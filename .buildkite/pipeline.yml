@@ -1,4 +1,14 @@
 steps:
+  - label: "Style examples"
+    command: |
+      buildkite-agent annotate 'Example `default` style' --context 'ctx-default'
+      buildkite-agent annotate 'Example `info` style' --style 'info' --context 'ctx-info'
+      buildkite-agent annotate 'Example `warning` style' --style 'warning' --context 'ctx-warn'
+      buildkite-agent annotate 'Example `error` style' --style 'error' --context 'ctx-error'
+      buildkite-agent annotate 'Example `success` style' --style 'success' --context 'ctx-success'
+      printf '%b\n' "$(cat code.md)" | buildkite-agent annotate --style 'info'
+      echo -e "\`\`\`term\nThis is a \033[0;31mtest\033[0m\n\`\`\`" | buildkite-agent annotate --append
+
   - block: "📝 ${ANNOTATE_LABEL:-Annotate}"
     fields:
       - text: Annotation Body
